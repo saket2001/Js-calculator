@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgba(0, 0, 0, 0.63);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    height: 100vh;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    color: azure;
+    font-size: 40px;
+    margin: 2% 0;
+}
+#container{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-flow: row;
+    justify-content: center;
+}
+#calculator-container{
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    background-color: rgba(43, 41, 41, 0.952);
+    color: white;
+}
+#output-box{
+    display: flex;
+    justify-content: start;
+    width: 90%;
+    height: 90px;
+    margin:0 4%;
+    margin-top: 4%;
+    margin-bottom: 2%;
+    border-radius: 15px;
+    background-color: rgb(184, 118, 88);
+}
+#output-content{
+    display: flex;
+    flex-flow: column;
+    color:white;
+    margin: 5px 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#output-history{
+    font-size: 20px;
+    padding: 5px;
+}
+#output{
+    font-size: 25px;
+    margin: 8px 0;
+    padding: 5px;
+}
+.key-container{
+    display: flex;
+    flex-flow:column wrap ;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    margin: 2% 4%;
+    padding:3%;
+}
+.number-panel{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: auto;
+}
+.number-key{
+    border: 1px solid  rgba(68, 67, 67, 0.753);
+    display: flex;
+    justify-content: center;
+    padding: 10px 12px;
+    margin: 5px 8px;
+    width: 50px;
+    font-size: 26px;
+    background-color: rgb(63, 60, 60);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.number-key:hover{
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) ;
+    font-weight: bolder;
+}
+.special-keys:hover{
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.308), 0 6px 20px 0 rgba(0, 0, 0, 0.486) ;
+}
+.special{
+    background-color: rgb(184, 118, 88);
+}
+
+@media only screen and (max-width:500px){
+    h1{
+    font-size: 30px;
+}
+#container{
+    display: flex;
+    width: auto;
+    height: auto;
+}
+#calculator-container{
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    position: relative;
+    top: 50px;
+}
+
+.number-key{
+    padding: 5px 12px;
+    margin: 5px 8px;
+    width: 20px;
+    font-size: 20px;
+}
+}

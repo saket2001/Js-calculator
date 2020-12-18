@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <title>calculator</title>
+  </head>
+  <body>
+    <h1>SIMPLE CALCULATOR</h1>
+    <div id="container">
+      <div id="calculator-container">
+        <div id="output-box">
+          <br>
+          <div id="output-content">  
+            <p id="output-history"> </p> 
+            <p id="output"> </p>
+          </div>
+        </div>
+        <div class="key-container">
+          <div class="number-panel">
+              <div class="number-key" id="9">9</div>
+              <div class="number-key" id="8">8</div>
+              <div class="number-key" id="7">7</div>
+              <div class="number-key special" id="plus-key" onclick=add()>+</div>
+            </div>
+            <div class="number-panel">
+              <div class="number-key"  id="6">6</div>
+              <div class="number-key" id="5">5</div>
+              <div class="number-key"  id="4">4</div>
+              <div class="number-key special" id="minus-key" onclick=minus()>-</div>
+            </div>
+            <div class="number-panel">
+              <div class="number-key"  id="3">3</div>
+              <div class="number-key" id="2">2</div>
+              <div class="number-key" id="1">1</div>
+              <div class="number-key special" id="multiplication-key" onclick=multiply()>*</div>
+            </div>
+            <div class="number-panel">
+              <div class="number-key"  id="0">0</div>
+              <div class="number-key"  id="dot">.</div>
+              <div class="number-key" id="equal-key" onclick=equalto()>=</div>
+              <div class="number-key special" id="divide-key" onclick=divide()>/</div>
+            </div>
+            <div class="number-panel">
+              <div class="number-key"  id="clear-recent" onclick=clearVar()>ON</div>
+              <div class="number-key"  id="clear-all" onclick=clearVar()>AC</div>
+              <div class="number-key" id="equal-key" onclick=showPrev()>PREV</div>
+            </div>
+        </div>
+        </div>
+        <script src="/index.js"></script>
+  </body>
+</html>
