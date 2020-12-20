@@ -96,6 +96,10 @@ function clearVar(){
   num2=null;
   num3=null;
   num4=null;
+  num5 = null;
+  num6 = null;
+  num7 = null;
+  num8 = null;
   number1=null;
   number2=null;
   operand1=null;
@@ -109,29 +113,35 @@ function showResult() {
   document.querySelector("#output-history").innerHTML =" ";
   document.querySelector("#output").innerHTML =result;
   resultHistory.push(result);
+} 
+var NumString="";
+function showOnOutput(num){
+  NumString.concat(num);
+  document.querySelector("#output-history").innerHTML =NumString;
 }
+
 document.getElementById(9).addEventListener('click',function(){
-  if(isEmpty()===1){
-    num1=9;
-     document.querySelector("#output-history").innerHTML = num1;
-  } 
-  else if(isEmpty()===2){
-    num2=9;
-     document.querySelector("#output-history").innerHTML = num1+""+num2;
-  }
-  else if (isEmpty() === 3) {
+  if (isEmpty() === 1) {
+    num1 = 9;
+    document.querySelector("#output-history").innerHTML = num1;
+    //showOnOutput(9);
+  }else if (isEmpty() === 2) {
+    num2 = 9;
+    document.querySelector("#output-history").innerHTML = num1 + "" + num2;
+  } else if (isEmpty() === 3) {
     num3 = 9;
-      document.querySelector("#output-history").innerHTML = num1 + "" + num2+""+operation+""+num3;
-  }
-  else if (isEmpty() === 4) {
+    document.querySelector("#output-history").innerHTML =
+      num1 + "" + num2 + "" +operation+""+ num3;
+  } else if (isEmpty() === 4) {
     num4 = 9;
-     document.querySelector("#output-history").innerHTML =
-       num1 + "" + num2 + "" + operation + "" + num3+""+num4;
-  }
+    document.querySelector("#output-history").innerHTML =
+      num1 + "" + num2 + "" +operation+""+ num3 + "" + num4;
+  } 
 });
 document.getElementById(8).addEventListener("click", function () {
    if (isEmpty() === 1) {
      num1 = 8;
+     showOnOutput(8);
      document.querySelector("#output-history").innerHTML = num1;
    } else if (isEmpty() === 2) {
      num2 = 8;
@@ -144,7 +154,7 @@ document.getElementById(8).addEventListener("click", function () {
      num4 = 8;
      document.querySelector("#output-history").innerHTML =
        num1 + "" + num2 + "" + operation + "" + num3 + "" + num4;
-   }
+   } 
 });
 document.getElementById(7).addEventListener("click", function () {
   if (isEmpty() === 1) {
